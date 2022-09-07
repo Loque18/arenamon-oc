@@ -1,0 +1,79 @@
+@import "../../global.scss";
+.testimonials{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    // min-height: 100vh;
+    
+    @include mobile_potrait{
+        min-height: auto;
+        // background-color: #8149be;
+    }
+    @include mobile_landscape{
+    }
+
+    
+    .testimonialsContent{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-size: cover;
+        position: relative;
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+        z-index: 1;
+        @include mobile_potrait{
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        @include mobile_landscape{
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        h1{
+            font-size: 4rem;
+            color: #00417b;
+            font-weight: 900;
+            @include mobile_potrait{
+                font-size: 1.2rem;
+            }
+            @include mobile_landscape{
+                font-size: 1.2rem;
+            }
+        }
+        .warpper{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            z-index: 1;
+            @include mobile_potrait{
+                flex-direction: column;
+                width: 90%;
+            }
+            @include mobile_landscape{
+            }
+
+        }
+    }
+    .mouse{
+        position: absolute;
+        width: 24vw;
+        z-index: 1;
+        right: -3vw;
+        top: -7vw;
+        @include mobile_potrait{
+            width: 40vw;
+            right: -10vw;
+            top: -17vw;
+        }
+        @include mobile_landscape{
+        }
+    }
+}

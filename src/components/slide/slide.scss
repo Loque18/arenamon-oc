@@ -1,0 +1,235 @@
+@import "../../global.scss";
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  margin-top: -1rem;
+  .slideView {
+    width: 64vw;
+    height: 32vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    @include mobile_potrait {
+      height: 65vw;
+      width: 72vw;
+      margin-bottom: 1rem;
+    }
+    @include mobile_landscape {
+    }
+    .slideList {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      left: -160vw;
+      transition: all 0.3s ease;
+      @include mobile_potrait {
+        left: -288vw;
+      }
+      @include mobile_landscape {
+      }
+    }
+  }
+  .pagenation {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    .page {
+      width: 7vw;
+      height: 0.5vw;
+      background-color: #fff;
+      clip-path: polygon(1rem 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      @include mobile_potrait {
+        width: 3rem;
+        height: 5px;
+        clip-path: polygon(0.5rem 0, 100% 0, calc(100% - 0.5rem) 100%, 0 100%);
+      }
+      @include mobile_landscape {
+        width: 3rem;
+        height: 5px;
+      }
+    }
+  }
+  .leftBtn {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 3vw;
+    margin-top: 5vw;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+    img {
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      img {
+        filter: drop-shadow(0px 0px 5px #fff);
+      }
+    }
+    @include mobile_potrait {
+      width: 3rem;
+      height: 3rem;
+      left: -1rem;
+    }
+    @include mobile_landscape {
+      width: 3rem;
+      height: 3rem;
+      left: 0;
+    }
+  }
+  .rightBtn {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: gray;
+    right: 3vw;
+    margin-top: 5vw;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 3rem;
+    img {
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      img {
+        filter: drop-shadow(0px 0px 5px #fff);
+      }
+    }
+    @include mobile_potrait {
+      width: 3rem;
+      height: 3rem;
+      right: -1rem;
+    }
+    @include mobile_landscape {
+      width: 3rem;
+      height: 3rem;
+      right: 0rem;
+    }
+  }
+}
+
+.card {
+  width: 30vw;
+  height: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 1vw;
+  @include mobile_potrait {
+    width: 70vw;
+    height: 50vw;
+  }
+  @include mobile_landscape {
+  }
+
+  .cardContent {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 5vw;
+    @include mobile_potrait {
+      margin-top: 10vw;
+    }
+    @include mobile_landscape {
+    }
+  }
+  .avatar {
+    height: 10vw;
+    z-index: 1;
+    position: absolute;
+    top: -5vw;
+    @include mobile_potrait {
+      height: 20vw;
+      top: -8vw;
+    }
+    @include mobile_landscape {
+    }
+  }
+  h2 {
+    color: #fff;
+    margin-bottom: 0.5vw;
+    font-weight: 900;
+    font-size: 2vw;
+    @include mobile_potrait {
+      font-size: 0.8rem;
+      margin-bottom: 0rem;
+    }
+    @include mobile_landscape {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+  p {
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.7vw;
+    font-size: 1vw;
+    text-align: center;
+    @include mobile_potrait {
+      font-size: 3vw;
+      line-height: 1;
+    }
+    @include mobile_landscape {
+      font-size: 0.6rem;
+    }
+  }
+  .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    @include mobile_potrait {
+      margin-bottom: 0.2rem;
+    }
+    @include mobile_landscape {
+      margin-bottom: 0.2rem;
+    }
+    img {
+      height: 2vw;
+      margin: 0.3vw;
+      @include mobile_potrait {
+        height: 3.5vw;
+        margin: 2px;
+      }
+      @include mobile_landscape {
+        height: 1rem;
+        margin: 2px;
+      }
+    }
+  }
+  .bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

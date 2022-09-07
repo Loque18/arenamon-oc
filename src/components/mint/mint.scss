@@ -1,0 +1,490 @@
+@import "../../global.scss";
+.mint{
+    width: 80%;
+    margin-left: 20%;
+    height: calc(100% - 6rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+    @include mobile_potrait{
+        background-size: cover;
+        margin-left: 0%;
+        width: 100%;
+        padding-top: 2.2rem;
+        padding-bottom: 1rem;
+    }
+    @include mobile_landscape{
+        padding-top: 4vw;
+        padding-bottom: 2vw;
+    }
+    .hline{
+        width: 70%;
+        z-index: 1;
+        height: 0.2vw;
+        background-image: linear-gradient(to right, #ffffff00, #ffffff, #ffffff00);
+        margin-bottom: 1vw;
+        @include mobile_potrait{
+            height: 1px;
+            margin-bottom: 0.5rem;
+        }
+        @include mobile_landscape{
+            height: 1px;
+        }
+    }
+    .status{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        @include mobile_potrait{
+        }
+        @include mobile_landscape{
+        }
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            width: 90%;
+            margin-bottom: 0.5vw;
+            @include mobile_potrait{
+                margin-bottom: 0.3rem;
+            }
+            @include mobile_landscape{
+            }
+            h3{
+                font-size: 1.7vw;
+                color: #fff;
+                font-weight: 900;
+                text-align: center;
+                margin-left: 0.5rem;
+                @include mobile_potrait{
+                    font-size: 5vw;
+
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+                    margin-bottom: 0rem;
+
+                }
+            }
+            p{
+                font-size: 1.2vw;
+                color: #a7a9de;
+                text-align: center;
+                @include mobile_potrait{
+                    font-size: 4vw;
+
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+                    margin-bottom: 0rem;
+
+                }
+            }
+            a{
+                font-size: 1.2vw;
+                font-weight: 700;
+                text-decoration: none;
+                color: #159dd9;
+                @include mobile_potrait{
+                    font-size: 4vw;
+
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+
+                }
+            }
+        }
+    }
+    .connectBtn{
+        padding: 1.4vw 4vw 1.7vw;
+        border: none;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1;
+        margin-bottom: 1vw;
+        // min-width: calc(80% - 70px);
+        @include mobile_potrait{
+            padding: 13px 30px 14px;
+            margin-bottom: 1rem;
+        }
+        @include mobile_landscape{
+            padding: 13px 30px 16px;
+        }
+        @media screen and (max-width: 270px) and (orientation:portrait){
+            padding: 15px 20px 16px;
+        }
+        p{
+            z-index: 1;
+            color: #fff;
+            text-shadow: -3px 3px 3px #c86113;
+            font-size: 1.3vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include mobile_potrait{
+                font-size: 0.8rem;
+                text-shadow: -1px 1px 1px #c861136c;
+            }
+            @include mobile_landscape{
+                font-size: 0.8rem;
+                text-shadow: -1px 1px 1px #c861136c;
+            }
+            @media screen and (max-width: 270px) and (orientation:portrait){
+                font-size: 0.6rem;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        &:hover{
+            img{
+                filter: drop-shadow(0px 0px 5px #fff);
+            }
+        }
+    }
+    .mintCount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 90%;
+        z-index: 1;
+        margin-bottom: 1vw;
+        @include mobile_potrait{
+            margin-bottom: 1rem;
+            justify-content: center;
+            width: 90%;
+        }
+        @include mobile_landscape{
+            margin-bottom: 0.5rem;
+            flex-direction: row;
+
+        }
+
+            .mintPlus{
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+                background-color: #00000000;
+                font-size: 2vw;
+                font-weight: 700;
+                color: #fff;
+                text-shadow:  -4px 4px 0px rgba(0, 0, 0, 0.753);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                line-height: 0.7;
+                &:hover{
+                    text-shadow:  -4px 4px 10px #000;
+
+                }
+                &:disabled{
+                    cursor:not-allowed;
+                    color: #464646;
+                    
+                }
+                
+                @include mobile_potrait{
+                    margin: 2px;
+                    font-size: 7vw;
+                }
+                @include mobile_landscape{
+                    margin: 2px;
+                    font-size: 1.6rem;
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                    margin: 2px;
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .mintCountValue{
+                width: 7vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3vw;
+                font-weight: 700;
+                color: #fff;
+                text-shadow:  -4px 4px 0px #000;
+                background-color: #2b2e50;
+                margin: 0rem 0.5vw 0rem 0.5vw;
+                border-radius: 5px;
+                min-width: 4rem;
+                @include mobile_potrait{
+                    font-size: 1.2rem;
+                    margin: 2vw;
+                    width: 3rem;
+                    height: 2rem;
+                    border-radius: 5px;
+                    min-width: 3rem;
+                }
+                @include mobile_landscape{
+                    font-size: 1rem;
+                    margin: 0;
+                    width: 3rem;
+                    height: 2rem;
+                    border-radius: 5px;
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                    width: 2.5rem;
+                    min-width: 2.5rem;
+                }
+            }
+
+
+        .mintNow{
+            background-color: #00000000;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 1.2vw 2vw 1.6vw;
+            min-width: 5rem;
+            margin-left: 0.5vw;
+            cursor: pointer;
+            &:disabled{
+                p{
+                    color: #aaa;
+                }
+            }
+            @include mobile_potrait{
+                margin-left: 4vw;
+                padding: 15px 10px;
+                min-width: 30vw;
+            }
+            @include mobile_landscape{
+                margin-left: 0.1rem;
+                padding: 15px 10px;
+            }
+            // @media screen and (device-width: 786px) and (orientation:portrait){
+            //     min-width: 16vw;
+            // }
+            @media screen and (max-width: 270px) and (orientation:portrait){
+                margin: 2px;
+                padding: 12px 10px;
+            }
+
+            &:hover{
+                img{
+                   filter: drop-shadow(0px 0px 5px #fff);
+                }
+            }
+            
+            p{
+                z-index: 1;
+                margin-bottom: 0rem;
+                font-size: 1.3vw;
+                font-weight: 700;
+                color: #fff;
+                text-shadow:  -3px 3px 5px #001360a0;
+                text-transform: uppercase;
+                @include mobile_potrait{
+                    font-size: 4vw;
+                    text-shadow:  -1px 1px 1px #00136052;
+                }
+                @include mobile_landscape{
+                    font-size: 0.6rem;
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                    font-size: 4vw;
+                }
+            }
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    .countDown{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        @include mobile_potrait{
+            width: 100%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            
+        }
+        @include mobile_landscape{
+            margin-bottom: 0.5rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+    .buyCredit{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        margin-bottom: 1vw;
+        @include mobile_potrait{
+            margin-bottom: 0.5rem;
+        }
+        @include mobile_landscape{
+        }
+        
+        .buyCard{
+            position: relative;
+            z-index: 1;
+            background-color: #ffffff00;
+            padding: 1.4vw 2vw 1.7vw;
+            
+            @include mobile_potrait{
+                padding: 13px 20px 18px;
+            }
+            @include mobile_landscape{
+                padding: 15px 20px 18px;
+            }
+            @media screen and (max-width: 270px) and (orientation:portrait){
+                padding: 13px 10px 15px;
+            }
+            img{
+                content:url("a_card.png");
+                display: none;
+                width: 2vw;
+                height: auto;
+                z-index: 1;
+                margin-right: 0.5vw;
+                @include mobile_potrait{
+                    width: 1.2rem !important;
+                    margin-right: 5px;
+                }
+                @include mobile_landscape{
+                    width: 1.2rem !important;
+                    margin-right: 5px;
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                    width: 1rem !important;
+                    margin-right: 5px;
+                }
+            }
+            span{
+                z-index: 1;
+                font-size: 1.3vw;
+                text-shadow: -3px 3px 3px #001460;
+                text-transform: uppercase;
+                @include mobile_potrait{
+                    font-size: 0.8rem;
+                    text-shadow: -1px 1px 1px #0013604a;
+                }
+                @include mobile_landscape{
+                    font-size: 0.9rem;
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                    font-size: 0.6rem;
+                }
+            }
+            &::after{
+                content:"";
+                background: url("buy_btn.png");
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background-size: 100% 100%;
+            }
+            
+        }
+    }
+    h2{
+        font-size: 2vw;
+        color: #fff;
+        font-weight: 900;
+        z-index: 1;
+        margin-bottom: 1vw;
+        @include mobile_potrait{
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        @include mobile_landscape{
+            font-size: 0.8rem;
+        }
+    }
+    .socialLinks{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        z-index: 1;
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            text-decoration: none;
+            background-color: #fff;
+            color: #002fde;
+            border-radius: 50%;
+            width: 2.8vw;
+            height: 2.8vw;
+            font-size: 1.2vw;
+            margin: 3px;
+            box-shadow: -3px 3px 3px #002fde;
+            transition: all 0.3s ease;
+            &:hover{
+                opacity: 0.7;
+            }
+            img{
+                height: 1vw;
+                @include mobile_potrait{
+                    height: 0.8rem;
+                }
+                @include mobile_landscape{
+                }
+                @media screen and (max-width: 270px) and (orientation:portrait){
+                }
+            }
+            .fab{
+                margin-top: 2px;
+            }
+            @include mobile_potrait{
+                width: 1.6rem;
+                height: 1.6rem;
+                font-size: 0.8rem;
+            }
+            @include mobile_landscape{
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        
+    }
+    .bar{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+}

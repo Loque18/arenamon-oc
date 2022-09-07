@@ -1,0 +1,125 @@
+@import "../../global.scss";
+.btntimer{
+    margin-bottom: 0rem !important;
+    
+    .timerNums{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgb(201, 201, 201);
+        font-size: 1rem;
+        margin-bottom: 0rem !important;
+        @include mobile_potrait{
+            font-size: 1rem;
+        }
+        @include mobile_landscape{
+            font-size: 1rem;
+        }
+        .number{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            font-size: 1rem !important;
+            font-weight: normal;
+            text-shadow:  2px 2px 0px rgb(52, 82, 252), -2px -2px 0px rgb(52, 82, 252), 2px -2px 0px rgb(52, 82, 252), -2px 2px 0px rgb(52, 82, 252),2px 2px 5px #000000;
+                           
+            @include mobile_potrait{
+                font-size: 0.6rem!important;
+            }
+            @include mobile_landscape{
+                font-size: 0.6rem!important;
+            }
+
+        }
+        .txt{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            text-shadow:  2px 2px 0px rgb(52, 82, 252), -2px -2px 0px rgb(52, 82, 252), 2px -2px 0px rgb(52, 82, 252), -2px 2px 0px rgb(52, 82, 252),2px 2px 5px #000000;
+                           
+            font-size: 1rem !important;
+            font-weight: normal;
+            margin-right: 0.5rem;
+            @include mobile_potrait{
+                font-size: 0.5rem!important;
+                margin-right: 0.2rem;
+            }
+            @include mobile_landscape{
+                font-size: 0.5rem!important;
+                margin-right: 0.2rem;
+            }
+        }
+    }
+}
+.hiddenTimer{
+    width: 0%;
+}
+.PreTimer{
+    width: 100%;
+    .PreTimerNums{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .number{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            margin: 1rem;
+            
+            @include mobile_potrait{
+                margin: 0.2rem;
+            }
+            @include mobile_landscape{
+                margin: 0.2rem;
+            }
+            .nums{
+                color: white;
+                font-size: 3.5rem;
+                line-height: 4rem;
+                font-family: 'Roboto', sans-serif;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 5px #50FCC2 solid;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+                @include mobile_potrait{
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    width: 3rem;
+                    height: 3rem;
+                }
+                @include mobile_landscape{
+                    font-size:1.5rem;
+                    line-height: 2rem;
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+            span{
+                color: white;
+                font-size: 1.5rem;
+                font-family: 'Roboto', sans-serif;
+                @include mobile_potrait{
+                    font-size: 1rem;
+                }
+                @include mobile_landscape{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

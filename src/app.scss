@@ -1,0 +1,52 @@
+@import "global.scss";
+.app{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    
+}
+.page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .sections{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        
+    }
+}
+
+@keyframes textAni {
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -100%;
+    }
+}
+
+.bg{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    @include mobile_potrait{
+        width: auto;
+        height: 100vh;
+    }
+    @include mobile_landscape{
+    }
+}

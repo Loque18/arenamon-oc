@@ -1,0 +1,157 @@
+@import "../../global.scss";
+.timer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .timerNums{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        color: rgb(201, 201, 201);
+        font-size: 2rem;
+        overflow: hidden;
+        @include mobile_potrait{
+            font-size: 1rem;
+        }
+        @include mobile_landscape{
+            font-size: 1rem;
+        }
+        div{
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            
+            @include mobile_potrait{
+                width: auto;
+            }
+            @include mobile_landscape{
+                // width: 5rem;
+            }
+            .number{
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                overflow: hidden;
+                color: #fff;
+                margin-bottom: 1rem;
+                
+                @include mobile_potrait{
+                    font-size: 2rem;
+                }
+                @include mobile_landscape{
+                    font-size: 2rem;
+                    margin-bottom: 0.51rem;
+                }
+                span{
+                    width: 4rem;
+                    height: 4.5rem;
+                    background-color: rgba(0, 0, 0, 0.541);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0.2rem;
+                    color: rgb(255, 255, 255);
+                    font-size: 3.5rem;
+                    font-weight: 600;
+                    position: relative;
+                    flex-direction: column;
+                    border-radius: 0.5rem;
+                    box-shadow: 1px 1px 0px black;
+                    font-family: 'Goldman', cursive;
+                    @include mobile_potrait{
+                        font-size: 2rem;
+                        width: 2rem;
+                        height: 2.5rem;
+                        margin: 0.05rem;
+                        border-radius: 0.3rem;
+                    }
+                    @include mobile_landscape{
+                        font-size: 2rem;
+                        width: 2rem;
+                        height: 2.5rem;
+                        border-radius: 0.3rem;
+                        margin: 0.1rem;
+                    }
+                    .bottom{
+                        width: 100%;
+                        height: 50%;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        position: absolute;
+                        bottom:0;
+                        border-bottom-left-radius: 0.5rem;
+                        border-bottom-right-radius: 0.5rem;
+                        @include mobile_potrait{
+                            border-bottom-left-radius: 0.3rem;
+                            border-bottom-right-radius: 0.3rem;
+                        }
+                        @include mobile_landscape{
+                            border-bottom-left-radius: 0.3rem;
+                            border-bottom-right-radius: 0.3rem;
+                        }
+                    }
+                }
+            }
+            .text{
+                color: rgb(182, 182, 182);
+                font-size: 1.5rem;
+                font-family: 'Goldman', cursive;
+                text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 3px 3px 10px black;
+                @include mobile_potrait{
+                    font-size: 1rem;
+                }
+                @include mobile_landscape{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .dot{
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+            font-weight: 600;
+            font-size: 3rem;
+            color:#fff;
+            @include mobile_potrait{
+                font-size: 2rem;
+            }
+            @include mobile_landscape{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.PreTimer{
+    width: 90%;
+    .PreTimerNums{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .number{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            
+            @include mobile_potrait{
+                font-size: 0.7em;
+            }
+            @include mobile_landscape{
+                font-size: 0.7rem;
+            }
+            
+        }
+    }
+}

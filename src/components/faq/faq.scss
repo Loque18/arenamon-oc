@@ -1,0 +1,287 @@
+@import "../../global.scss";
+.faq {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  @include mobile_potrait {
+  }
+  @include mobile_landscape {
+    height: auto !important;
+  }
+  .scroll {
+    position: absolute;
+    top: 10rem;
+    @include mobile_potrait {
+      top: 5rem;
+    }
+    @include mobile_landscape {
+      top: 5rem;
+    }
+  }
+  .faqContent {
+    width: 80%;
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    @include mobile_potrait {
+      width: 90%;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+    @include mobile_landscape {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-align: center;
+      width: 820px;
+      z-index: 2;
+      @include mobile_potrait {
+        font-size: 1.2rem;
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+      @include mobile_landscape {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        line-height: 1;
+      }
+    }
+    .faqWrapper {
+      width: 70vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      z-index: 1;
+      @include mobile_potrait {
+        width: 90vw;
+      }
+      .line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: all 0.4s ease;
+        padding-bottom: 1vw;
+        margin-bottom: 1vw;
+        max-width: 60vw;
+        position: relative;
+        border-radius: 10px 10px 0 10px;
+        overflow: hidden;
+        @include mobile_potrait {
+          margin-bottom: 1rem;
+          max-width: 100%;
+        }
+        @include mobile_landscape {
+          margin-bottom: 1rem;
+        }
+        .question {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #00417b;
+          padding-bottom: 2.5vw;
+          padding-top: 2.5vw;
+          z-index: 1;
+
+          @include mobile_potrait {
+            font-size: 1rem;
+            padding-bottom: 0rem;
+          }
+          @include mobile_landscape {
+            font-size: 1rem;
+            padding-bottom: 0.2rem;
+            padding-top: 0.2rem;
+          }
+          .show {
+            cursor: pointer;
+            font-size: 2rem;
+            transition: all 0.4s ease;
+            margin-right: 1rem;
+            color: #00417b;
+            @include mobile_potrait {
+              font-size: 0.8rem;
+            }
+            @include mobile_landscape {
+              font-size: 0.8rem;
+            }
+          }
+          h3 {
+            font-size: 2.2vw;
+            font-weight: 900;
+            width: 2rem;
+            margin-left: 1rem;
+            @include mobile_potrait {
+              font-size: 1rem;
+              width: 1rem;
+            }
+            @include mobile_landscape {
+              font-size: 1rem;
+            }
+          }
+          p {
+            cursor: pointer;
+            color: #00417b;
+            font-size: 1.6vw;
+            font-weight: 700;
+            width: calc(100% - 5rem);
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 3rem;
+            @include mobile_potrait {
+              font-size: 0.8rem;
+            }
+            @include mobile_landscape {
+              font-size: 1rem;
+            }
+          }
+          img {
+            height: 3.2vw;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            @include mobile_potrait {
+              height: 2rem;
+            }
+            @include mobile_landscape {
+              height: 2rem;
+            }
+          }
+        }
+        div {
+          width: 90%;
+          z-index: 1;
+          border-top: 1px #aaa solid;
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            h3 {
+              font-size: 2.2vw;
+              font-weight: 900;
+              width: 2rem;
+              margin-left: 1rem;
+              color: #159dd9;
+              @include mobile_potrait {
+                font-size: 1rem;
+                width: 1rem;
+                margin-left: 0rem;
+              }
+              @include mobile_landscape {
+                font-size: 1rem;
+                margin-left: 0rem;
+              }
+            }
+            .answer {
+              width: calc(100% - 4rem);
+              color: #00417b;
+              font-size: 1.2vw;
+              overflow: hidden;
+              margin-bottom: 1vh;
+              transition: all 0.4s ease;
+              margin-top: 1rem;
+              margin-left: 1rem;
+
+              @include mobile_potrait {
+                font-size: 0.8rem;
+                line-height: 1;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+              }
+              @include mobile_landscape {
+                font-size: 0.8rem;
+                line-height: 1;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+              }
+              .fas {
+                margin-right: 0.5rem;
+              }
+              a {
+                color: #00417b;
+                font-weight: 600;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+            0 100%
+          );
+          top: 0;
+          left: 0;
+          background-color: #58ace5;
+        }
+        &::after {
+          content: "";
+          width: calc(100% - 4px);
+          height: calc(100% - 4px);
+          top: 2px;
+          left: 2px;
+          position: absolute;
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 1.5vw),
+            calc(100% - 1.5vw) 100%,
+            0 100%
+          );
+        }
+      }
+      .color1 {
+        &::after {
+          background-color: #fff;
+        }
+      }
+      .color2 {
+        &::after {
+          background-color: #c4edff;
+        }
+      }
+    }
+  }
+  .monsters {
+    position: absolute;
+    z-index: 1;
+    width: 35vw;
+    left: -3vw;
+    top: -14vw;
+    @include mobile_potrait {
+      width: 50vw;
+      left: -10vw;
+      top: -17vw;
+    }
+    @include mobile_landscape {
+      fot-size: 1rem;
+    }
+  }
+}

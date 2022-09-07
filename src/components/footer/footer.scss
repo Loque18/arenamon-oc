@@ -1,0 +1,474 @@
+@import "../../global.scss";
+.footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: 100% 100%;
+  z-index: 1;
+  // height: 23vw;
+  @include mobile_potrait {
+    height: auto;
+  }
+  @include mobile_landscape {
+  }
+  .footerContent {
+    width: 55%;
+    margin-right: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 7vw;
+    margin-bottom: 5vw;
+    @include mobile_potrait {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 1rem;
+    }
+    @include mobile_landscape {
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+      @include mobile_potrait {
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      @include mobile_landscape {
+      }
+      .logo {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile_potrait {
+          display: none;
+        }
+        @include mobile_landscape {
+          display: none;
+        }
+        a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          @include mobile_potrait {
+            font-size: 2rem;
+          }
+          @include mobile_landscape {
+            font-size: 2rem;
+          }
+          img {
+            height: 4.5vw;
+            transition: all 0.3s ease;
+            @include mobile_potrait {
+              height: 3rem;
+            }
+            @include mobile_landscape {
+              height: 3rem;
+            }
+          }
+          &:hover {
+            img {
+              filter: drop-shadow(0px 0px 5px #457ef3);
+            }
+          }
+        }
+      }
+      .myForm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        background-color: #0033df;
+        border-radius: 10px;
+        box-shadow: 0px 0px 2px #fff;
+        @include mobile_potrait {
+          flex-direction: column;
+        }
+        @include mobile_landscape {
+        }
+        h2 {
+          z-index: 1;
+          font-size: 1.2vw;
+          color: #fff;
+          padding: 10px;
+          margin-left: 1rem;
+          @include mobile_potrait {
+            font-size: 0.8rem;
+            margin-left: 0rem;
+          }
+          @include mobile_landscape {
+            font-size: 1rem;
+          }
+        }
+        span {
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          margin: 7px;
+          background-color: #fff;
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 1vw),
+            calc(100% - 1vw) 100%,
+            0 100%
+          );
+          border-radius: 3px;
+          overflow: hidden;
+          input {
+            font-size: 1vw;
+            padding: 0.4vw;
+            min-width: 20vw;
+            max-width: 20vw;
+            border: none;
+            &:focus {
+              outline: none;
+            }
+            &::placeholder {
+              color: #0a3f6d;
+            }
+            @include mobile_potrait {
+              font-size: 0.8rem;
+              max-width: 60vw;
+              padding: 0.4rem;
+            }
+            @include mobile_landscape {
+              width: 8rem;
+              font-size: 0.8rem;
+              padding: 0.4rem;
+            }
+          }
+          .send {
+            border: none;
+            height: 3.3vw;
+            width: 4vw;
+            background-color: #ffffff00;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover {
+              opacity: 0.7;
+            }
+            img {
+              height: 100%;
+              width: 100%;
+              margin: 0;
+            }
+            @include mobile_potrait {
+              height: 2.5rem;
+              width: 3.5rem;
+            }
+            @include mobile_landscape {
+              height: 2.5rem;
+              width: 3.5rem;
+            }
+          }
+        }
+        // &::before{
+        //     content: '';
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     clip-path:polygon(0 0, 100% 0,  100% calc(100% - 1.5vw), calc(100% - 1.5vw) 100%, 0 100%);
+        //     top: 0;
+        //     left: 0;
+        //     background-color: #fff;
+        //     @include mobile_potrait{
+        //         display: none;
+        //     }
+        //     @include mobile_landscape{
+        //     }
+        // }
+        // &::after{
+        //     content: '';
+        //     width: calc(100% - 4px);
+        //     height: calc(100% - 4px);
+        //     top: 2px;
+        //     left: 2px;
+        //     position: absolute;
+        //     background-color: #0033df;
+        //     clip-path:polygon(0 0, 100% 0,  100% calc(100% - 1.5vw), calc(100% - 1.5vw) 100%, 0 100%);
+        //     @include mobile_potrait{
+        //         display: none;
+        //     }
+        //     @include mobile_landscape{
+        //     }
+        // }
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 2vw;
+      @include mobile_potrait {
+        margin-bottom: 0rem;
+      }
+      @include mobile_landscape {
+        margin-bottom: 0rem;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        @include mobile_potrait {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        @include mobile_landscape {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        li {
+          margin-right: 3vw;
+          @include mobile_potrait {
+            margin: 0.2rem 0.5rem;
+          }
+          @include mobile_landscape {
+            margin: 0.2rem 0.5rem;
+          }
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1vw;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-bottom: 5px;
+            &:hover {
+              &::before {
+                width: 2rem;
+              }
+            }
+            @include mobile_potrait {
+              font-size: 0.8rem;
+            }
+            @include mobile_landscape {
+              font-size: 0.8rem;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0rem;
+              height: 2px;
+              background-color: #02e5ff;
+              bottom: 0;
+              left: 0;
+              transition: all 0.8s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .socialLinks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      z-index: 1;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+        background-color: #fff;
+        color: #002fde;
+        border-radius: 50%;
+        width: 3vw;
+        height: 3vw;
+        font-size: 1.5vw;
+        margin: 3px;
+        box-shadow: -3px 3px 3px #002fde;
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 0.7;
+        }
+        img {
+          height: 1vw;
+          @include mobile_potrait {
+            height: 1rem;
+          }
+          @include mobile_landscape {
+            height: 1rem;
+          }
+        }
+        @include mobile_potrait {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1rem;
+        }
+        @include mobile_landscape {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .copy {
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+    right: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    p {
+      width: 100%;
+      text-align: end;
+      color: #fff;
+      font-size: 0.8vw;
+      @include mobile_landscape {
+        font-size: 0.6rem;
+      }
+    }
+    @include mobile_potrait {
+      display: none;
+    }
+    @include mobile_landscape {
+      bottom: 0.5rem;
+      right: 1vw;
+    }
+  }
+  .footbg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include mobile_potrait {
+      display: none;
+    }
+    @include mobile_landscape {
+    }
+  }
+  .dragon {
+    height: 25vw;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+    @include mobile_potrait {
+      display: none;
+    }
+    @include mobile_landscape {
+      display: flex;
+    }
+  }
+  .dragon_mob {
+    height: 25vw;
+    z-index: 1;
+    display: none;
+    @include mobile_potrait {
+      display: flex;
+      height: 60vw;
+      bottom: -10vw;
+    }
+    @include mobile_landscape {
+      display: none;
+    }
+  }
+  .footbg_mob {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: none;
+    @include mobile_potrait {
+      display: flex;
+      height: 120%;
+    }
+    @include mobile_landscape {
+      display: none;
+    }
+  }
+  .footWallet {
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+    display: none;
+    background-color: #ffffff55;
+    z-index: 1;
+    @include mobile_potrait {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @include mobile_landscape {
+      display: none;
+    }
+    .connectBtn {
+      padding: 18px 30px;
+      border: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      @include mobile_potrait {
+        padding: 13px 30px;
+      }
+      @include mobile_landscape {
+        padding: 10px 30px;
+      }
+
+      p {
+        z-index: 1;
+        color: #457ef3;
+        font-size: 1.2rem;
+        font-weight: 700;
+        @include mobile_potrait {
+          font-size: 0.8rem;
+        }
+        @include mobile_landscape {
+          font-size: 0.8rem;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        img {
+          filter: drop-shadow(0px 0px 5px #fff);
+        }
+      }
+    }
+  }
+}
