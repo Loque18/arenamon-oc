@@ -29,6 +29,19 @@ export default function HomePage() {
     <>
       <div className="page">
         <Topbar />
+        <div
+          className="bg-container"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "150vh",
+            overflow: "hidden",
+          }}
+        >
+          <img src="assets/bg_01.png" alt="" className="bg" />
+        </div>
         <div className="home" style={{ minHeight: "100vh" }}>
           <div className="homeContent">
             <div className="warpper">
@@ -71,7 +84,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <img src="assets/bg_01.png" alt="" className="bg" />
         </div>
 
         <Footer />
