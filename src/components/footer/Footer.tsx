@@ -144,7 +144,7 @@ export default function Footer() {
       <img src="assets/bg_03.png" alt="" className="footbg_mob" />
       <div className="footWallet">
         <div
-          className={"connaectBtn"}
+          className={"connectBtn"}
           onClick={() => {
             !loginStatus && setShowConnectModal(true);
           }}
