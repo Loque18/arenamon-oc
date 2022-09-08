@@ -9,6 +9,8 @@ export function useEagerConnect() {
   const [tried, setTried] = useState(false);
   const [error, setError] = useState(null);
 
+  console.log("error", error);
+
   useEffect(() => {
     login();
     setError(error);

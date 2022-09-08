@@ -1,11 +1,12 @@
 import "./app.scss";
 // import { useEagerConnect } from "hooks/useEagerConnect";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import HomePage from "pages/HomePage";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Toaster } from "react-hot-toast";
 import { useEagerConnect } from "./hooks/useEagerConnect";
 import HomePage from "./pages/HomePage";
+import ThankYouPage from "./pages/thankyouPage";
 function App() {
   useEagerConnect();
   return (
@@ -18,10 +19,11 @@ function App() {
         }}
       />
       <Router>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/thankyou" element={<ThankYouPage />} />
           {/* <Route exact path="/mint" component={MintPage} /> */}
-        </Switch>
+        </Routes>
       </Router>
     </ParallaxProvider>
   );

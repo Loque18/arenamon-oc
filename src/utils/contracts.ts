@@ -61,13 +61,13 @@ export async function purchase(
 
     if (isPublicSaleActive === true) {
       bSuccess = await mintPublic(chainId, provider, account, numberOfTokens);
-    } else if (isPreSaleActive === true) {
-      bSuccess = await mintWhitelist(
-        chainId,
-        provider,
-        account,
-        numberOfTokens
-      );
+      // } else if (isPreSaleActive === true) {
+      //   bSuccess = await mintWhitelist(
+      //     chainId,
+      //     provider,
+      //     account,
+      //     numberOfTokens
+      //   );
     } else {
       toast.error("Sale is not opened.");
     }

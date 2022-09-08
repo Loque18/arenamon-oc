@@ -17,6 +17,8 @@ connector = networkConnector;
 const useAuth = () => {
   const { chainId, activate, deactivate } = useWeb3React();
 
+  console.log("chainId", chainId);
+
   const login = useCallback(
     async (walletId = 0) => {
       if (walletId === 1) {
@@ -27,18 +29,40 @@ const useAuth = () => {
         connector = CoinbaseWallet;
       }
 
-      await activate(connector!);
-      if (chainId !== currentNetwork) {
-        if (connector !== networkConnector) {
+      await activate(connector!, async (e) => {
+        console.log(e.message);
+
+        if (
+          e.message.toLowerCase() ===
+          "No Ethereum provider was found on window.ethereum.".toLowerCase()
+        ) {
+          toast.error("Please join from a browser with metamask installed");
+        }
+
+        if (e.message.toLowerCase().includes("unsupported chain id")) {
           toast.error(
-            "Unsupported Network. This platform work on Ethereum Network"
+            "Select the Ethereum network on your wallet and try connecting again"
           );
           connector = networkConnector;
           await activate(connector);
         }
-      }
+      });
+
+      // console.log("aqui llegue");
+
+      // if (chainId !== currentNetwork) {
+      //   console.log("aquicas");
+
+      //   if (connector !== networkConnector) {
+      //     toast.error(
+      //       "Select the Ethereum network on your wallet and try connecting again"
+      //     );
+      //     connector = networkConnector;
+      //     await activate(connector);
+      //   }
+      // }
     },
-    [activate, chainId]
+    [chainId]
   );
 
   const logout = useCallback(() => {

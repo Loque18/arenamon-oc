@@ -17,10 +17,11 @@ import { useEagerConnect } from "../hooks/useEagerConnect";
 // import Faq from 'components/faq/Faq';
 export default function HomePage() {
   useEagerConnect();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   AOS.init();
-  window.onload = () => {
+
+  window.addEventListener("load", () => {
     setIsLoading(false);
     setTimeout(() => {
       AOS.init({
@@ -44,7 +45,7 @@ export default function HomePage() {
         anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
       });
     }, 500);
-  };
+  });
 
   return (
     <>

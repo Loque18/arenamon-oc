@@ -1,5 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Timer from "../timer/Timer";
 import { truncateWalletString } from "../../utils";
 import "./mint.scss";
@@ -29,6 +30,8 @@ export default function Mint({ onModalShow }: PropsType) {
   const [userBalance, setUserBalance] = useState<number>(0);
   const [mintsLeft, setMintsLeft] = useState<number>(0);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     getMintEngineInfo().then(
       (nftMintEngineDetail: NFTMintEngineDetail | null) => {
@@ -57,7 +60,6 @@ export default function Mint({ onModalShow }: PropsType) {
       getBalanceOf(account, library.getSigner(), chainId!).then((balance) => {
         setUserBalance(balance);
         const mintsLeeft = mintEngineDetail?.publicMintLimit! - balance;
-        console.log("mintsLeeft", mintsLeeft);
 
         setMintsLeft(mintsLeeft);
       });
@@ -96,13 +98,15 @@ export default function Mint({ onModalShow }: PropsType) {
         // reset mint count
         setMintCount(0);
 
-        setTimeout(() => {
-          getMintEngineInfo().then(
-            (nftMintEngineDetail: NFTMintEngineDetail | null) => {
-              setMintEngineDetail(nftMintEngineDetail);
-            }
-          );
-        }, 2000);
+        navigate("/thankyou");
+
+        // setTimeout(() => {
+        //   getMintEngineInfo().then(
+        //     (nftMintEngineDetail: NFTMintEngineDetail | null) => {
+        //       setMintEngineDetail(nftMintEngineDetail);
+        //     }
+        //   );
+        // }, 2000);
       } else {
         toast.error("Mint Failed!");
       }
@@ -145,33 +149,8 @@ export default function Mint({ onModalShow }: PropsType) {
         </span>
       </div>
       <div className="hline"></div>
-      <div
-        className={"connectBtn"}
-        onClick={() => {
-          !loginStatus && onModalShow!(true);
-        }}
-      >
-        <p>{loginStatus ? truncateWalletString(account!) : "Connect Wallet"}</p>
-        <img src="assets/wallet_btn_01.png" alt="" />
-      </div>
-      {showMint === false ? (
-        <>
-          <div className="countDown">
-            {/* <Timer
-              deadLine={1662310800}
-              setShowMint={() => {
-                setShowMint(true);
-              }}
-            /> */}
-            <Timer
-              deadLine={0}
-              setShowMint={() => {
-                setShowMint(true);
-              }}
-            />
-          </div>
-        </>
-      ) : (
+
+      {loginStatus ? (
         <>
           <div className="mintCount">
             <div className="mintPlus" onClick={decreaseHandle}>
@@ -191,6 +170,18 @@ export default function Mint({ onModalShow }: PropsType) {
             </div>
           </div>
         </>
+      ) : (
+        <div
+          className={"connectBtn"}
+          onClick={() => {
+            !loginStatus && onModalShow!(true);
+          }}
+        >
+          <p>
+            {loginStatus ? truncateWalletString(account!) : "Connect Wallet"}
+          </p>
+          <img src="assets/wallet_btn_01.png" alt="" />
+        </div>
       )}
       <div className="hline"></div>
       <h2>OR</h2>
