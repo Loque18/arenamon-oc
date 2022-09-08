@@ -74,82 +74,81 @@ export async function purchase(
 
     return bSuccess;
   } catch (e) {
-    console.log(e);
     return false;
   }
 }
 
-export async function mintWhitelist(
-  chainId: number,
-  provider: any,
-  account: string | number,
-  numberOfTokens: number
-) {
-  const ArenamonNFTContract: any = getContractObj(
-    "ArenamonNFT",
-    chainId,
-    provider
-  );
-  try {
-    const index = (mapWhitelist as any).claims[account]?.index;
-    const amount = (mapWhitelist as any).claims[account]?.amount;
-    var proof = (mapWhitelist as any).claims[account]?.proof;
+// export async function mintWhitelist(
+//   chainId: number,
+//   provider: any,
+//   account: string | number,
+//   numberOfTokens: number
+// ) {
+//   const ArenamonNFTContract: any = getContractObj(
+//     "ArenamonNFT",
+//     chainId,
+//     provider
+//   );
+//   try {
+//     const index = (mapWhitelist as any).claims[account]?.index;
+//     const amount = (mapWhitelist as any).claims[account]?.amount;
+//     var proof = (mapWhitelist as any).claims[account]?.proof;
 
-    var big_index: BigNumber = index
-      ? BigNumber.from(index)
-      : BigNumber.from(0);
-    var big_amount: BigNumber = amount
-      ? BigNumber.from(amount)
-      : BigNumber.from(0);
-    if (proof === undefined) proof = [];
+//     var big_index: BigNumber = index
+//       ? BigNumber.from(index)
+//       : BigNumber.from(0);
+//     var big_amount: BigNumber = amount
+//       ? BigNumber.from(amount)
+//       : BigNumber.from(0);
+//     if (proof === undefined) proof = [];
 
-    const presaleMintedCount = await ArenamonNFTContract.m_mapPresaleMintCount(
-      account
-    );
-    const presaleMintLimit = await ArenamonNFTContract.PRESALE_MINT_LIMIT();
-    const leafNode = await ArenamonNFTContract.toLeaf(
-      account,
-      big_index,
-      big_amount
-    );
-    const isWhitelisted = await ArenamonNFTContract.isWhiteListed(
-      leafNode,
-      proof
-    );
+//     const presaleMintedCount = await ArenamonNFTContract.m_mapPresaleMintCount(
+//       account
+//     );
+//     const presaleMintLimit = await ArenamonNFTContract.PRESALE_MINT_LIMIT();
+//     const leafNode = await ArenamonNFTContract.toLeaf(
+//       account,
+//       big_index,
+//       big_amount
+//     );
+//     const isWhitelisted = await ArenamonNFTContract.isWhiteListed(
+//       leafNode,
+//       proof
+//     );
 
-    if (isWhitelisted === false) {
-      toast.error("Your wallet is not registered");
-      return false;
-    }
+//     if (isWhitelisted === false) {
+//       toast.error("Your wallet is not registered");
+//       return false;
+//     }
 
-    if (
-      presaleMintedCount.toNumber() + numberOfTokens >
-      presaleMintLimit.toNumber()
-    ) {
-      toast.error("Mint count is higher than limit");
-      return false;
-    }
+//     if (
+//       presaleMintedCount.toNumber() + numberOfTokens >
+//       presaleMintLimit.toNumber()
+//     ) {
+//       toast.error("Mint count is higher than limit");
+//       return false;
+//     }
 
-    const nftPrice: BigNumber = await ArenamonNFTContract.PRESALE_PRICE();
+//     const nftPrice: BigNumber = await ArenamonNFTContract.PRESALE_PRICE();
 
-    const tx = await ArenamonNFTContract.mintWhitelist(
-      account,
-      numberOfTokens,
-      big_index,
-      big_amount,
-      proof,
-      {
-        value: nftPrice.mul(numberOfTokens),
-      }
-    );
-    await tx.wait(1);
+//     const tx = await ArenamonNFTContract.mintWhitelist(
+//       account,
+//       numberOfTokens,
+//       big_index,
+//       big_amount,
+//       proof,
+//       {
+//         value: nftPrice.mul(numberOfTokens),
+//       }
+//     );
+//     await tx.wait(1);
 
-    return true;
-  } catch (e) {
-    console.log(e);
-    return false;
-  }
-}
+//     return true;
+//   } catch (e) {
+//     console.log(e);
+//     return false;
+//   }
+// }
 
 export async function mintPublic(
   chainId: number,
@@ -184,8 +183,17 @@ export async function mintPublic(
     await tx.wait(1);
 
     return true;
-  } catch (e) {
+  } catch (e: any) {
     console.log(e);
+
+    if (
+      e.message
+        .toString()
+        .toLowerCase()
+        .includes("insufficient funds for intrinsic transaction cost")
+    ) {
+      toast.error("insufficient funds to make the transaction");
+    }
     return false;
   }
 }

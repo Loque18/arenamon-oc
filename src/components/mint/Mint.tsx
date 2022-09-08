@@ -23,6 +23,7 @@ export default function Mint({ onModalShow }: PropsType) {
   const [mintCount, setMintCount] = useState(0);
 
   const [loginStatus, setLoginStatus] = useState(false);
+
   const { connector, library, chainId, account, active } = useWeb3React();
   const [mintEngineDetail, setMintEngineDetail] =
     useState<NFTMintEngineDetail | null>(null);
@@ -110,8 +111,9 @@ export default function Mint({ onModalShow }: PropsType) {
       } else {
         toast.error("Mint Failed!");
       }
-    } catch (error) {
+    } catch (error: any) {
       toast.error("Mint Failed!");
+      toast.error(error.message);
     }
     toast.dismiss(load_toast_id);
   };
