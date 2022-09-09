@@ -272,7 +272,7 @@
   .monsters {
     position: absolute;
     z-index: 1;
-    width: 35vw;
+    width: 30vw;
     left: -3vw;
     top: -14vw;
     @include mobile_potrait {
@@ -281,7 +281,7 @@
       top: -17vw;
     }
     @include mobile_landscape {
-      fot-size: 1rem;
+      font-size: 1rem;
     }
   }
 }

@@ -126,7 +126,7 @@ export default function Mint({ onModalShow }: PropsType) {
         </span>
         {loginStatus ? (
           <span>
-            <p>Your nfts : </p>{" "}
+            <p>Your NFTs : </p>{" "}
             <h3>
               {userBalance && userBalance > 0 ? userBalance : 0}
               {/* {mintEngineDetail?.maxSupply! - mintEngineDetail?.totalSupply!} /{" "}
@@ -134,12 +134,12 @@ export default function Mint({ onModalShow }: PropsType) {
             </h3>
           </span>
         ) : null}
-        <span>
+        {/* <span>
           <p> Max mint per address is</p>
           <h3 style={{ color: "white", fontSize: "1rem" }}>
             {mintEngineDetail?.publicMintLimit}
           </h3>
-        </span>
+        </span> */}
         <span>
           <a
             href="https://beta.arenamon.com/disclaimer-arenamon"

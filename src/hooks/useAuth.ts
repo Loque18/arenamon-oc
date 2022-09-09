@@ -17,8 +17,6 @@ connector = networkConnector;
 const useAuth = () => {
   const { chainId, activate, deactivate } = useWeb3React();
 
-  console.log("chainId", chainId);
-
   const login = useCallback(
     async (walletId = 0) => {
       if (walletId === 1) {

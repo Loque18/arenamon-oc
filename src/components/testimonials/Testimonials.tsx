@@ -17,11 +17,11 @@ export default function Testimonials() {
       name: "Doodles Official",
       desc: 'We are proud to announce our whitelist collaboration with the official collection "Doodles". Doodles is the 11th biggest NFT collection in the world and we are super happy to welcome them to the Arenamon tournament.',
     },
-    {
-      img: "assets/VsOcAhT.png",
-      name: "NeoTokyo Citizens",
-      desc: 'We are proud to announce our whitelist collaboration with the official collection "NeoTokyo Citizens". NeoTokyo Citizens is a collection of 2000 holders with a solid floor price of 5 ETH. We are grateful for their presence and activity in our Discord server. One of their member called "Speedwagon" won our first BETA Tournament.',
-    },
+    // {
+    //   img: "assets/VsOcAhT.png",
+    //   name: "NeoTokyo Citizens",
+    //   desc: 'We are proud to announce our whitelist collaboration with the official collection "NeoTokyo Citizens". NeoTokyo Citizens is a collection of 2000 holders with a solid floor price of 5 ETH. We are grateful for their presence and activity in our Discord server. One of their member called "Speedwagon" won our first BETA Tournament.',
+    // },
     {
       img: "assets/LbL7oYM.png",
       name: "Premint Collector Pass",
