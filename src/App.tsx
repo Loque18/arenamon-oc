@@ -28,8 +28,8 @@ function App() {
           <Toaster
             position="top-center"
             toastOptions={{
-              success: { duration: 3000 },
-              error: { duration: 3000 },
+              success: { duration: 5000 },
+              error: { duration: 5000 },
             }}
             containerStyle={{
               top: 150,
