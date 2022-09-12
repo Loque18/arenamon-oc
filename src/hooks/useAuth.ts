@@ -34,7 +34,9 @@ const useAuth = () => {
           e.message.toLowerCase() ===
           "No Ethereum provider was found on window.ethereum.".toLowerCase()
         ) {
-          toast.error("Please join from a browser with metamask installed");
+          toast.error(
+            "Please open Metamask app and visit https://mint.arenamon.com from Metamask browser."
+          );
         }
 
         if (e.message.toLowerCase().includes("unsupported chain id")) {
