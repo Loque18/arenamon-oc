@@ -192,7 +192,9 @@ export async function mintPublic(
         .toLowerCase()
         .includes("insufficient funds for intrinsic transaction cost")
     ) {
-      toast.error("insufficient funds to make the transaction");
+      toast.error(
+        "Please verify that you have enough funds on your wallet and some extra to pay the gas fees."
+      );
     }
     return false;
   }

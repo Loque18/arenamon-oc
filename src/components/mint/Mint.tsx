@@ -20,7 +20,7 @@ type PropsType = {
 
 export default function Mint({ onModalShow }: PropsType) {
   const [showMint, setShowMint] = useState(false);
-  const [mintCount, setMintCount] = useState(0);
+  const [mintCount, setMintCount] = useState(1);
 
   const [loginStatus, setLoginStatus] = useState(false);
 
@@ -42,7 +42,7 @@ export default function Mint({ onModalShow }: PropsType) {
   }, []);
 
   const decreaseHandle = () => {
-    if (mintCount > 0) {
+    if (mintCount > 1) {
       setMintCount(mintCount - 1);
     }
   };
@@ -122,19 +122,26 @@ export default function Mint({ onModalShow }: PropsType) {
     <div className="mint">
       <div className="status">
         <span>
-          <p>Mint Price : </p> <h3>{mintEngineDetail?.publicCost || 0} ETH</h3>
+          <p>Mint Price: </p> <h3>{mintEngineDetail?.publicCost || 0} ETH</h3>
         </span>
-        {loginStatus ? (
-          <span>
-            <p>Your NFTs : </p>{" "}
-            <h3>
-              {userBalance && userBalance > 0 ? userBalance : 0}
-              {/* {mintEngineDetail?.maxSupply! - mintEngineDetail?.totalSupply!} /{" "}
-            {mintEngineDetail?.maxSupply} */}
-            </h3>
-          </span>
+
+        <span>
+          <p>Supply: </p>{" "}
+          <h3>
+            {/* {userBalance && userBalance > 0 ? userBalance : 0} */}
+            {mintEngineDetail?.maxSupply! -
+              mintEngineDetail?.totalSupply!} / {mintEngineDetail?.maxSupply}
+          </h3>
+        </span>
+
+        {/* {loginStatus ? (
+          <>
+            <p>NFT's: </p>
+            {userBalance && userBalance > 0 ? userBalance : 0}
+          </>
         ) : null}
-        {/* <span>
+
+        <span>
           <p> Max mint per address is</p>
           <h3 style={{ color: "white", fontSize: "1rem" }}>
             {mintEngineDetail?.publicMintLimit}

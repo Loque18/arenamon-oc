@@ -1,31 +1,52 @@
 import "./app.scss";
+import { Suspense } from "react";
 // import { useEagerConnect } from "hooks/useEagerConnect";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 // import HomePage from "pages/HomePage";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Toaster } from "react-hot-toast";
 import { useEagerConnect } from "./hooks/useEagerConnect";
-import HomePage from "./pages/HomePage";
-import ThankYouPage from "./pages/thankyouPage";
+
+import routes from "virtual:generated-pages-react";
+
+const RoutesWrapper = () => {
+  const routing = useRoutes(routes);
+  return routing;
+};
+
 function App() {
   useEagerConnect();
   return (
-    <ParallaxProvider>
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          success: { duration: 3000 },
-          error: { duration: 3000 },
-        }}
-      />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/thankyou" element={<ThankYouPage />} />
-          {/* <Route exact path="/mint" component={MintPage} /> */}
-        </Routes>
-      </Router>
-    </ParallaxProvider>
+    <Router>
+      <Suspense fallback={<p>Loading...</p>}>
+        <ParallaxProvider>
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              success: { duration: 3000 },
+              error: { duration: 3000 },
+            }}
+            containerStyle={{
+              top: 150,
+            }}
+          />
+
+          <RoutesWrapper />
+          {/* 
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/thankyou" element={<ThankYouPage />} />
+      
+          </Routes>
+        </Router> */}
+        </ParallaxProvider>
+      </Suspense>
+    </Router>
   );
 }
 

@@ -27,6 +27,11 @@ export default function HomePage() {
 
   return (
     <>
+      <img
+        src="https://track.arenamon.com/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL"
+        width="1"
+        height="1"
+      />
       <div className="page">
         <Topbar />
         <div

@@ -1,1 +1,1 @@
-export const REACT_APP_NETWORK_ID = 1;
+export const REACT_APP_NETWORK_ID = 4;
