@@ -209,7 +209,7 @@ export default function Mint({ onModalShow }: PropsType) {
         />
       </div>
 
-      <div className="socialLinks">
+      {/* <div className="socialLinks">
         <a
           href="https://mobile.twitter.com/ArenaMon_NFT"
           className="twitter"
@@ -240,10 +240,10 @@ export default function Mint({ onModalShow }: PropsType) {
           target="_blank"
           rel="noreferrer"
         >
-          {/* <img src="assets/opensea.svg" alt="" /> */}
+          {/* <img src="assets/opensea.svg" alt="" /> 
           <i className="fab fa-discord"></i>
         </a>
-      </div>
+      </div> */}
       <img src="assets/mint_bar.png" alt="" className="bar" />
     </div>
   );
