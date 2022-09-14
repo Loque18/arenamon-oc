@@ -14,6 +14,8 @@ import toast from "react-hot-toast";
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { REACT_APP_NETWORK_ID } from "../../config";
 
+import data from "../../videos";
+
 type PropsType = {
   onModalShow?(flag: boolean): void;
 };

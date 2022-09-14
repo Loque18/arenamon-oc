@@ -1,217 +1,226 @@
 @import "../../global.scss";
-.home{
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #8149be;
+  margin-top: 2rem;
+  @include mobile_potrait {
+    height: auto;
+    margin-top: 0rem;
+  }
+  @include mobile_landscape {
+    height: auto;
+  }
+
+  .homeContent {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #8149be;
-    margin-top: 2rem;
-    @include mobile_potrait{
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 7vw;
+    @include mobile_potrait {
+      margin-bottom: 1rem;
+    }
+    @include mobile_landscape {
+      margin-bottom: 3rem;
+    }
+    .warpper {
+      width: 85%;
+      // height: calc(100vh - 12rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      z-index: 1;
+      @include mobile_potrait {
+        flex-direction: column;
         height: auto;
-        margin-top: 0rem;
+        width: 95%;
+      }
+      @include mobile_landscape {
+        height: auto;
+      }
+      .left {
+        flex: 0.55;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        @include mobile_potrait {
+          width: 100%;
+        }
+        @include mobile_landscape {
+          flex: 0.5;
+        }
+        h2 {
+          font-size: 1.7vw;
+          line-height: 1;
+          font-weight: 800;
+          color: #fff;
+          text-transform: uppercase;
+          width: 100%;
+          margin-bottom: 0.5vh;
+          @include mobile_potrait {
+            font-size: 6vw;
+            text-align: center;
+            margin-top: 1rem;
+          }
+          @include mobile_landscape {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+        h1 {
+          font-size: 3.3vw;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 900;
+          width: 100%;
+          line-height: 1;
+          margin-bottom: 0.5vh;
+          @include mobile_potrait {
+            font-size: 8vw;
+            text-align: center;
+          }
+          @include mobile_landscape {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+          }
+          span {
+            color: #fe9722;
+          }
+        }
 
-    }
-    @include mobile_landscape{
-        height: auto;
-    }
-    
-    .homeContent{
-        width: 100%;
+        .videoContent {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          margin-top: 1.2vw;
+          @include mobile_potrait {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+          }
+          @include mobile_landscape {
+          }
+          iframe {
+            position: absolute;
+            height: calc(100% - 1.8vw);
+            z-index: 2;
+            position: absolute;
+            width: calc(100% - 0.5vw);
+            top: 1.55vw;
+            border-radius: 10px 2px 1.5vw 10px;
+            background-color: #19243b;
+            @include mobile_potrait {
+              top: 3vw;
+              border-radius: 2px 2px 10px 5px;
+              height: calc(100% - 4vw);
+              width: calc(100% - 1vw);
+            }
+            @include mobile_landscape {
+            }
+          }
+          .videoEmbed {
+            position: absolute;
+            width: calc(100% - 5px);
+            top: 1.5vw;
+            border-radius: 10px 10px 30px 10px;
+            background-color: #19243b;
+            @include mobile_potrait {
+              top: 3vw;
+              border-radius: 2px 5px 10px 5px;
+            }
+            @include mobile_landscape {
+              border-radius: 5px 5px 10px 5px;
+            }
+          }
+          .bar {
+            width: 100%;
+            z-index: 1;
+          }
+          .topMark {
+            position: absolute;
+            z-index: 3;
+            height: 2.5vw;
+            top: 0;
+            left: 0;
+            @include mobile_potrait {
+              height: 1.5rem;
+            }
+            @include mobile_landscape {
+            }
+          }
+          .playBtn {
+            position: absolute;
+            background-color: #ffffff55;
+            width: 5rem;
+            height: 5rem;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            border-radius: 50%;
+            color: #ffffffee;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            cursor: pointer;
+            z-index: 2;
+
+            &:hover {
+              opacity: 1;
+            }
+            .fas {
+              margin-left: 5px;
+            }
+            @include mobile_potrait {
+              transform: scale(0.5);
+            }
+            @include mobile_landscape {
+              transform: scale(0.5);
+            }
+          }
+        }
+      }
+      .right {
+        flex: 0.45;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        background-size: cover;
-        position: relative;
-        z-index: 1;
-        margin-bottom: 7vw;
-        @include mobile_potrait{
-            margin-bottom: 1rem;
+        @include mobile_potrait {
+          width: 100%;
         }
-        @include mobile_landscape{
-            margin-bottom: 3rem;
+        @include mobile_landscape {
+          flex: 0.5;
         }
-        .warpper{
-            width: 85%;
-            // height: calc(100vh - 12rem);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            z-index: 1;
-            @include mobile_potrait{
-                flex-direction: column;
-                height: auto;
-                width: 95%;
-            }
-            @include mobile_landscape{
-                height: auto;
-            }
-            .left{
-                flex: 0.55;
-                display: flex;
-                align-items: flex-start;
-                justify-content: space-between;
-                flex-direction: column;
-                height: 100%;
-                @include mobile_potrait{
-                    width: 100%;
-                }
-                @include mobile_landscape{
-                    flex: 0.5;
-                }
-                h2{
-                    font-size: 1.7vw;
-                    line-height: 1;
-                    font-weight: 800;
-                    color: #fff;
-                    text-transform: uppercase;
-                    width: 100%;
-                    margin-bottom: 0.5vh;
-                    @include mobile_potrait{
-                        font-size: 6vw;
-                        text-align: center;
-                        margin-top: 1rem;
-                    }
-                    @include mobile_landscape{
-                        font-size: 1rem;
-                        margin-bottom: 1rem;
-                    }
-                }
-                h1{
-                    font-size: 3.3vw;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-weight: 900;
-                    width: 100%;
-                    line-height: 1;
-                    margin-bottom: 0.5vh;
-                    @include mobile_potrait{
-                        font-size: 8vw;
-                        text-align: center;
-                    }
-                    @include mobile_landscape{
-                        font-size: 1.2rem;
-                        margin-bottom: 1rem;
-                    }
-                    span{
-                        color: #fe9722;
-                    }
-                }
-               
-                .videoContent{
-                    width: 90%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    overflow: hidden;
-                    margin-top: 1.2vw;
-                    @include mobile_potrait{
-                        margin-top: 1rem;
-                        margin-bottom: 1rem;
-                        width: 100%;
-                    }
-                    @include mobile_landscape{
-                    }
-                    iframe{
-                        position: absolute;
-                        height: calc(100% - 1.8vw);
-                        z-index: 2;
-                        position: absolute;
-                        width: calc(100% - 0.5vw);
-                        top: 1.55vw;
-                        border-radius: 10px 2px 1.5vw 10px;
-                        background-color: #19243b;
-                        @include mobile_potrait{
-                            top: 3vw;
-                            border-radius: 2px 2px 10px 5px;
-                            height: calc(100% - 4vw);
-                            width: calc(100% - 1vw);
-                        }
-                        @include mobile_landscape{
-                        }
-                    }
-                    .videoEmbed{
-                        position: absolute;
-                        width: calc(100% - 5px);
-                        top: 1.5vw;
-                        border-radius: 10px 10px 30px 10px;
-                        background-color: #19243b;
-                        @include mobile_potrait{
-                            top: 3vw;
-                            border-radius: 2px 5px 10px 5px;
-
-                        }
-                        @include mobile_landscape{
-                            border-radius: 5px 5px 10px 5px;
-                        }
-                    }
-                    .bar{
-                        width: 100%;
-                        z-index: 1;
-                    }
-                    .topMark{
-                        position: absolute;
-                        z-index: 3;
-                        height: 2.5vw;
-                        top: 0;
-                        left: 0;
-                        @include mobile_potrait{
-                            height: 1.5rem;
-                        }
-                        @include mobile_landscape{
-                        }
-                    }
-                    .playBtn{
-                        position: absolute;
-                        background-color: #ffffff55;
-                        width: 5rem;
-                        height: 5rem;
-                        border: none;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                        font-size: 2rem;
-                        border-radius: 50%;
-                        color: #ffffffee;
-                        transition: all 0.3s ease;
-                        opacity: 0.5;
-                        cursor: pointer;
-                        z-index: 2;
-                        
-                        &:hover{
-                            opacity: 1;
-                        }
-                        .fas{
-                            margin-left: 5px;
-                        }
-                        @include mobile_potrait{
-                            transform: scale(0.5);
-                        }
-                        @include mobile_landscape{
-                            transform: scale(0.5);
-                        }
-                    }
-                }
-            }
-            .right{
-                flex: 0.45;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include mobile_potrait{
-                    width: 100%;
-                }
-                @include mobile_landscape{
-                    flex: 0.5;
-                }
-            }
-        }
+      }
     }
-    
+  }
+}
+
+.is-hidden-mobile {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.is-hidden-desktop {
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 }
