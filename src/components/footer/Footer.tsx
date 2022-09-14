@@ -23,7 +23,7 @@ export default function Footer() {
               <img src="assets/logo.png" alt="" />
             </HashLink>
           </div>
-          <div className="myForm">
+          {/* <div className="myForm">
             <h2>Get Updates!</h2>
             <span>
               <input type="text" placeholder="enter your email" />
@@ -31,9 +31,9 @@ export default function Footer() {
                 <img src="assets/send_btn.png" alt="" />
               </button>
             </span>
-          </div>
+          </div> */}
         </div>
-        <div className="links">
+        {/* <div className="links">
           <ul>
             <li>
               <a
@@ -96,8 +96,8 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-        </div>
-        <div className="socialLinks">
+        </div> */}
+        {/* <div className="socialLinks">
           <a
             href="https://mobile.twitter.com/ArenaMon_NFT"
             className="twitter"
@@ -128,10 +128,10 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            {/* <img src="assets/opensea.svg" alt="" /> */}
+            {/* <img src="assets/opensea.svg" alt="" /> 
             <i className="fab fa-discord"></i>
           </a>
-        </div>
+        </div> */}
       </div>
       <span className="copy">
         <p>©2022 ArenaMon League</p>

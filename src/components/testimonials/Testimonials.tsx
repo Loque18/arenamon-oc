@@ -12,11 +12,11 @@ export default function Testimonials() {
       name: "The Hoot List",
       desc: 'We are proud to announce our whitelist collaboration with the alpha group called "The Hoot List". The Hoot List is a private group of 1200+ verified Moonbirds which is ranked the 9th biggest NFT collection in the world. We also did a partnership with another group called "Moonbirds Dynasty" which is a large community of Chinese holders.',
     },
-    {
-      img: "assets/mctxT6a.png",
-      name: "Doodles Official",
-      desc: 'We are proud to announce our whitelist collaboration with the official collection "Doodles". Doodles is the 11th biggest NFT collection in the world and we are super happy to welcome them to the Arenamon tournament.',
-    },
+    // {
+    //   img: "assets/mctxT6a.png",
+    //   name: "Doodles Official",
+    //   desc: 'We are proud to announce our whitelist collaboration with the official collection "Doodles". Doodles is the 11th biggest NFT collection in the world and we are super happy to welcome them to the Arenamon tournament.',
+    // },
     // {
     //   img: "assets/VsOcAhT.png",
     //   name: "NeoTokyo Citizens",

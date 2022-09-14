@@ -85,11 +85,11 @@ export default function HomePage() {
                     ></iframe>
 
                     <img src="assets/video_bar_02.png" className="bar" alt="" />
-                    <img
+                    {/* <img
                       src="assets/video_mark.png"
                       alt=""
                       className="topMark"
-                    />
+                    /> */}
                   </div>
                 </div>
                 <br /> <br />
