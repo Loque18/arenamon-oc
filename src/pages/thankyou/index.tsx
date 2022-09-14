@@ -102,7 +102,7 @@ export default function HomePage() {
                 <br /> <br />
                 <div>
                   <button className="button-nobtn" onClick={openNewWindow}>
-                    Check it on opensea{" "}
+                    Check it on OpenSea{" "}
                     <span className="icon">
                       <i className="fa-solid fa-up-right-from-square" />
                     </span>
