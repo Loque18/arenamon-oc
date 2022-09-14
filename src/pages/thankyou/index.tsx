@@ -51,7 +51,14 @@ export default function HomePage() {
         >
           <img src="assets/bg_01.png" alt="" className="bg" />
         </div>
-        <div className="home" style={{ minHeight: "100vh" }}>
+        <div
+          className="home"
+          style={{
+            minHeight: "100vh",
+            justifyContent: "start",
+            paddingTop: "2rem",
+          }}
+        >
           <div className="homeContent">
             <div className="warpper">
               <div className="warapa" style={{ display: "hidden" }}>

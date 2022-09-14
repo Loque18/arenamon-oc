@@ -124,15 +124,16 @@ export default function Mint({ onModalShow }: PropsType) {
     <div className="mint">
       <div className="status">
         <span>
-          <p>Mint Price: </p> <h3>{mintEngineDetail?.publicCost || 0} ETH</h3>
+          <p>Mint Price: </p> <h3>{mintEngineDetail?.publicCost || 1.5} ETH</h3>
         </span>
 
         <span>
           <p>Supply: </p>{" "}
           <h3>
             {/* {userBalance && userBalance > 0 ? userBalance : 0} */}
-            {mintEngineDetail?.maxSupply! -
-              mintEngineDetail?.totalSupply!} / {mintEngineDetail?.maxSupply}
+            {mintEngineDetail?.maxSupply! - mintEngineDetail?.totalSupply! ||
+              10000}{" "}
+            / {mintEngineDetail?.maxSupply}
           </h3>
         </span>
 
