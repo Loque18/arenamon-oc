@@ -113,7 +113,11 @@ export default function Faq() {
                     <br />
 
                     {item.answer.map((answer, index2) => {
-                      return <p key={index2}>{answer}</p>;
+                      return (
+                        <p style={{ fontSize: "1.2rem" }} key={index2}>
+                          {answer}
+                        </p>
+                      );
                     })}
                   </div>
                 </Expand>
