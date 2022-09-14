@@ -28,6 +28,7 @@
     "@web3-react/walletconnect-connector": "^6.2.8",
     "@web3-react/walletlink-connector": "^6.2.14",
     "aos": "^2.3.4",
+    "axios": "^0.27.2",
     "ethers": "^5.5.1",
     "gsap": "^3.8.0",
     "parallax-js": "^3.1.0",

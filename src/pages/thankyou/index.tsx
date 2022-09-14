@@ -16,9 +16,9 @@ import { useEagerConnect } from "../../hooks/useEagerConnect";
 // import Testimonials from 'components/testimonials/Testimonials';
 // import Faq from 'components/faq/Faq';
 
-import "./style.scss";
+import useFetchVideos from "../../hooks/useFetchVideos";
 
-import data from "../../videos";
+import "./style.scss";
 
 export default function HomePage() {
   useEagerConnect();
@@ -26,6 +26,8 @@ export default function HomePage() {
   const openNewWindow = () => {
     window.open("https://opensea.io/collection/arenamon", "_blank");
   };
+
+  const { data } = useFetchVideos();
 
   return (
     <>

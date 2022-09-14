@@ -6,7 +6,7 @@ import "./home.scss";
 //     setIsLoading ? (flag:boolean):void;
 // };
 
-import data from "../../videos";
+import useFetchVideos from "../../hooks/useFetchVideos";
 
 export default function Home() {
   // {setIsLoading}:LoadingType
@@ -32,6 +32,8 @@ export default function Home() {
 
   // }
   const [showConnectModal, setShowConnectModal] = useState(false);
+
+  const { data } = useFetchVideos();
 
   return (
     <>
