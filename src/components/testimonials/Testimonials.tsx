@@ -12,11 +12,11 @@ export default function Testimonials() {
       name: "The Hoot List",
       desc: 'We are proud to announce our whitelist collaboration with the alpha group called "The Hoot List". The Hoot List is a private group of 1200+ verified Moonbirds which is ranked the 9th biggest NFT collection in the world. We also did a partnership with another group called "Moonbirds Dynasty" which is a large community of Chinese holders.',
     },
-    // {
-    //   img: "assets/mctxT6a.png",
-    //   name: "Doodles Official",
-    //   desc: 'We are proud to announce our whitelist collaboration with the official collection "Doodles". Doodles is the 11th biggest NFT collection in the world and we are super happy to welcome them to the Arenamon tournament.',
-    // },
+    {
+      img: "assets/mctxT6a.png",
+      name: "Doodles Official",
+      desc: 'We are proud to announce our whitelist collaboration with the official collection "Doodles". Doodles is the 11th biggest NFT collection in the world and we are super happy to welcome them to the Arenamon tournament.',
+    },
     // {
     //   img: "assets/VsOcAhT.png",
     //   name: "NeoTokyo Citizens",
@@ -26,6 +26,11 @@ export default function Testimonials() {
       img: "assets/LbL7oYM.png",
       name: "Premint Collector Pass",
       desc: 'We are proud to announce our whitelist collaboration with the official collection "Premint Collector Pass". More than 3000+ pass holders connected their wallets on our Premint page to win a whitelist from Arenamon.',
+    },
+    {
+      img: "assets/social-media.png",
+      name: "Social Media",
+      desc: "Arenamon has 120,000+ members on Discord, 100,000+ on Twitter, 69000+ followers on Instagram and more than 9,000+ subscribers on Youtube. When you invest in an NFT, you become part of a big family of NFT investors.",
     },
   ];
 
