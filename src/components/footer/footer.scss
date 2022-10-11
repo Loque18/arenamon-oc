@@ -35,7 +35,7 @@
     }
     .top {
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
       justify-content: start;
       flex-direction: row;
       width: 100%;
@@ -231,6 +231,8 @@
   }
 }
 
-.askkalajpo {
+.koakla {
+  font-size: 1rem;
+  color: white;
   position: relative;
 }

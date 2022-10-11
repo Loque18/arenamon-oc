@@ -25,6 +25,7 @@ export default function Footer() {
           </div>
           <br />
           <div>
+            <h1 className="koakla">Mint page updated by </h1>
             <a
               href="https://metalab.business/"
               target="_blank"
