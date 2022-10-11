@@ -23,6 +23,16 @@ export default function Footer() {
               <img src="assets/logo.png" alt="" />
             </HashLink>
           </div>
+          <br />
+          <div>
+            <a
+              href="https://metalab.business/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="assets/metalab.png" alt="" width={150} />
+            </a>
+          </div>
           {/* <div className="myForm">
             <h2>Get Updates!</h2>
             <span>

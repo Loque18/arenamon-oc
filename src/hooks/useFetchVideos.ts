@@ -20,7 +20,7 @@ const useFetchVideos = () => {
           },
         });
 
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data.record);
       } catch (err) {
         console.log(err);
