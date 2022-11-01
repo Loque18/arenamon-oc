@@ -206,7 +206,7 @@ export default function Mint({ onModalShow }: PropsType) {
           collectionPhoto="https://arenamon.com/img/front/images/ArenaMon-Logo.png"
           clientId="1d7cf81b-b1c1-4524-aea5-bd14cc95cb4b"
           className="buyCard"
-          mintConfig={{ type: "erc-721", price: "0.1", numberOfTokens: 1 }}
+          mintConfig={{ type: "erc-721", price: "0.04", numberOfTokens: 1 }}
         />
       </div>
 
